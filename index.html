@@ -1,46 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>fyi</title>
+  <title>Mike, FYI</title>
   <style>
     body {
-      text-align: center;
+      text-align: left;
     }
 
     h1 {
       margin-top: 50px;
+      margin-left: 50px;
     }
 
     img {
+      display: block;
       width: 200px;
       height: 200px;
-      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
       border-radius: 50%;
     }
-
-    .social-icons {
-      margin-top: 30px;
+   
+   
+    * {
+        box-sizing: border-box;
+    }
+    
+    a {
+    line-height: 32px;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+    }
+    
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 300px;
     }
 
-    .social-icons a {
-      margin: 0 10px;
-      font-size: 24px;
-      color: #333;
-      text-decoration: none;
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
     }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    
   </style>
 </head>
+
 <body>
-  <h1>Michael Corliss</h1>
-  <img src="55dce5905e9b954c.jpg" alt="Profile Picture">
-  <div class="social-icons">
-    <a rel="me" href="https://zirk.us/@mjc" target="_blank">Mastodon</a>
-    <a href="https://en.wikipedia.org/wiki/User:Carleas" target="_blank">Wikipedia</a>
-    <a href="https://ilovephilosophy.com/" target="_blank">Forum</a>
-    <a href="https://github.com/mcorliss/" target="_blank">GitHub</a>
-    <a href="https://www.instagram.com/michael.jeremiah.corliss/" target="_blank">Insta</a>
-    <a href="https://www.linkedin.com/in/michaeljcorliss/" target="_blank">LinkedIn</a>
-    <a href="https://repository.library.georgetown.edu/handle/10822/553697" target="_blank">Thesis</a>
+<div>
+<h1>Michael Corliss</h1>
+</div>
+<div class="row">
+  <div class="column">
+      <img src="55dce5905e9b954c.jpg" alt="Profile Picture">
   </div>
+  <div class="column">
+    <a href="https://ilovephilosophy.com/" target="_blank">ILovePhilosophy</a><br>
+    <a href="https://repository.library.georgetown.edu/handle/10822/553697" target="_blank">Thesis</a><br>
+    <a rel="me" href="https://bsky.app/profile/corliss.bsky.social" target="_blank">Bluesky</a> <br>
+    <a rel="me" href="https://c.im/@_m" target="_blank">Mastodon</a> <br>
+    <a href="https://en.wikipedia.org/wiki/User:Carleas" target="_blank">Wikipedia</a> <br>
+    <a href="https://github.com/mcorliss/" target="_blank">GitHub</a><br>
+
+  </div>
+</div>
 </body>
 </html>
